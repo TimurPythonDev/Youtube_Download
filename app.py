@@ -10,10 +10,12 @@ async def on_startup(dispatcher):
     # Birlamchi komandalar (/star va /help)
     await set_default_commands(dispatcher)
 
+    # Foydalanuvchlarni bazaga qo'shimiz
     try:
         db.create_table_users()
     except Exception as err:
         print(err)
+
 
     # Bot ishga tushgani haqida adminga xabar berish
     await on_startup_notify(dispatcher)

@@ -46,7 +46,6 @@ class Database:
 
     def add_user(self, id: int, name: str):
 
-
         sql = """
         INSERT INTO Users(id, Name) VALUES(?, ?)
         """
